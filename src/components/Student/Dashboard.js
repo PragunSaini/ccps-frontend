@@ -46,7 +46,7 @@ const Dashboard = ({ user }) => {
 
     // Render support notifications
     const renderSupportNotifications = () => {
-        if (!notifications) {
+        if (!notifications || notifications.length === 0) {
             return <p>No notifications</p>
         }
         return notifications
@@ -77,7 +77,7 @@ const Dashboard = ({ user }) => {
 
     // Render confirmation notifications
     const renderConfirmationNotifications = () => {
-        if (!notifications) {
+        if (!notifications || notifications.length === 0) {
             return <p>No notifications</p>
         }
         return notifications
@@ -121,15 +121,15 @@ const Dashboard = ({ user }) => {
                     <dd className='ml0 gray'>{user.email}</dd>
                 </dl>
             </div>
-            <div>
+            <div style={{ marginBottom: '20px', marginTop: '20px' }}>
                 <div className='center mw6'>
-                    <h1 className='supp-reqs'>Support requests</h1>
+                    <h3 className='supp-reqs'>Support requests</h3>
                 </div>
                 <ul className='list pl0 mt0 measure center'>{renderSupportNotifications()}</ul>
             </div>
-            <div>
+            <div style={{ marginBottom: '20px', marginTop: '20px' }}>
                 <div className='center mw6'>
-                    <h1 className='res-conf'>Resolved Confirmations</h1>
+                    <h3 className='res-conf'>Resolved Confirmations</h3>
                 </div>
                 <ul className='list pl0 mt0 measure center'>{renderConfirmationNotifications()}</ul>
             </div>

@@ -103,7 +103,7 @@ const ViewComplaints = ({ user }) => {
         <div className=''>
             <main className='mw8 center'>
                 <div className=''>
-                    <h1>All Pending Complaints</h1>
+                    <h1>Your Complaints</h1>
                 </div>
                 {renderComplaints()}
             </main>
